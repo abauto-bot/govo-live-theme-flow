@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="GOVO Express">
   <defs>
     <linearGradient id="govoGreen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#c7ff24"/>
-      <stop offset="45%" stop-color="#8cff00"/>
-      <stop offset="100%" stop-color="#29b900"/>
+      <stop offset="0%" stop-color="#8CFF00"/>
+      <stop offset="52%" stop-color="#67D51D"/>
+      <stop offset="100%" stop-color="#2E8E19"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -14,17 +14,71 @@
     </filter>
   </defs>
 
-  <path d="M260 40 C156 40 84 116 84 217 C84 332 207 396 260 478 C313 396 436 332 436 217 C436 116 364 40 260 40Z"
-        fill="none" stroke="url(#govoGreen)" stroke-width="42" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <rect width="900" height="520" fill="#020403"/>
 
-  <path d="M300 218 H424" stroke="url(#govoGreen)" stroke-width="48"/>
+  <!-- GO mark -->
+  <g transform="translate(135 68)" filter="url(#softGlow)">
+    <!-- G -->
+    <path d="M247 24
+             C165 12 84 64 58 145
+             C25 246 91 350 198 365
+             C281 377 356 332 389 263
+             L242 263
+             L268 195
+             L470 195
+             C478 295 414 392 310 426
+             C181 468 41 392 7 263
+             C-26 137 50 12 178 -18
+             C240 -32 305 -18 354 17
+             L318 77
+             C298 50 276 31 247 24Z"
+          fill="url(#govoGreen)"/>
 
-  <path d="M286 152 C252 124 192 132 165 174 C131 227 157 300 218 316 C254 325 291 313 313 286"
-        fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" filter="url(#glow)"/>
+    <!-- G inner bar -->
+    <path d="M209 205 L402 205 L402 262 L181 262 Z" fill="url(#govoGreen)"/>
 
-  <path d="M272 404 L302 404 L276 444 L307 444 L254 500 L270 452 L238 452Z"
-        fill="url(#govoGreen)" filter="url(#glow)"/>
+    <!-- O white ring -->
+    <circle cx="522" cy="225" r="117" fill="none" stroke="#FFFFFF" stroke-width="62"/>
+    <path d="M428 133 C450 103 477 86 509 78" fill="none" stroke="#020403" stroke-width="34" stroke-linecap="round"/>
 
-  <ellipse cx="260" cy="455" rx="118" ry="32"
-           fill="none" stroke="#ffffff" stroke-width="18" opacity="0.95" filter="url(#glow)"/>
+    <!-- V inside O -->
+    <path d="M475 180 L525 288 L580 180 L536 180 L523 223 L508 180 Z" fill="url(#govoGreen)"/>
+
+    <!-- connection waves -->
+    <path d="M620 78 C678 106 710 162 710 225" fill="none" stroke="url(#govoGreen)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M662 36 C744 77 790 151 790 225" fill="none" stroke="url(#govoGreen)" stroke-width="22" stroke-linecap="round"/>
+  </g>
+
+  <!-- wordmark -->
+  <g transform="translate(135 392)">
+    <text x="0" y="0"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="52"
+          font-weight="700"
+          letter-spacing="21"
+          fill="#7CFF1A">GOVO</text>
+
+    <text x="333" y="0"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="52"
+          font-weight="700"
+          letter-spacing="21"
+          fill="#FFFFFF">EXPRESS</text>
+
+    <line x1="0" y1="55" x2="690" y2="55" stroke="#7CFF1A" stroke-width="3"/>
+
+    <text x="0" y="108"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="30"
+          font-weight="700"
+          letter-spacing="7"
+          fill="#FFFFFF">SMART SERVICE.</text>
+
+    <text x="330" y="108"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="30"
+          font-weight="700"
+          letter-spacing="7"
+          fill="#7CFF1A">STRONGER COMMUNITY.</text>
+  </g>
 </svg>

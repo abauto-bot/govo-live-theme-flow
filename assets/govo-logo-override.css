@@ -1,0 +1,20 @@
+/* GOVO new GO logo override */
+img[src*="govo-final-logo"],
+img[src*="govo-logo"],
+img[src*="logo"]{
+  object-fit:contain!important;
+}
+
+.govo-logo-override-img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  display:block!important;
+  border-radius:inherit!important;
+}
+
+/* top logo area cleaner */
+[class*="logo"],
+[class*="brand"] img{
+  filter:saturate(.98) contrast(1.05)!important;
+}

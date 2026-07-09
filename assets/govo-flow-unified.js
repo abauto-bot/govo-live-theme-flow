@@ -197,3 +197,22 @@
     loadConfig();
   }
 })();
+
+/* GOVO SAFE OLD UI STABILIZER */
+(function(){
+  var css='/assets/govo-safe-old-stabilizer.css';
+  var js='/assets/govo-safe-old-stabilizer.js';
+  var v='safeoldfooter';
+  if(!document.querySelector('link[href^="'+css+'"]')){
+    var l=document.createElement('link');
+    l.rel='stylesheet';
+    l.href=css+'?v='+v;
+    document.head.appendChild(l);
+  }
+  if(!document.querySelector('script[src^="'+js+'"]')){
+    var s=document.createElement('script');
+    s.src=js+'?v='+v;
+    s.defer=true;
+    document.head.appendChild(s);
+  }
+})();

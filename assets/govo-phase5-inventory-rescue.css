@@ -1,0 +1,140 @@
+:root{
+  --govo-bg:#020503;
+  --govo-bg2:#082313;
+  --govo-green:#8cff00;
+  --govo-green2:#14e889;
+  --govo-white:#f2fff7;
+  --govo-muted:#b7c7be;
+  --govo-panel:rgba(8,25,16,.86);
+  --govo-line:rgba(140,255,0,.28);
+}
+.govo-phase5-wrap{
+  margin:18px auto 110px;
+  padding:0 20px;
+  max-width:980px;
+}
+.govo-phase5-hero{
+  border:1px solid var(--govo-line);
+  background:
+    radial-gradient(circle at 15% 10%,rgba(140,255,0,.18),transparent 32%),
+    radial-gradient(circle at 85% 20%,rgba(20,232,137,.13),transparent 30%),
+    linear-gradient(145deg,rgba(2,5,3,.96),rgba(8,35,19,.92));
+  border-radius:30px;
+  padding:24px;
+  box-shadow:0 0 35px rgba(140,255,0,.10);
+}
+.govo-phase5-badge{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 13px;
+  border-radius:999px;
+  border:1px solid var(--govo-line);
+  color:var(--govo-green);
+  background:rgba(140,255,0,.08);
+  font-weight:900;
+}
+.govo-phase5-title{
+  margin:18px 0 10px;
+  font-size:clamp(34px,8vw,74px);
+  line-height:.95;
+  letter-spacing:-2px;
+  color:var(--govo-white);
+}
+.govo-phase5-title b{color:var(--govo-green)}
+.govo-phase5-sub{
+  color:var(--govo-muted);
+  font-size:18px;
+  line-height:1.6;
+}
+.govo-phase5-actions{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:20px;
+}
+.govo-phase5-btn{
+  min-height:72px;
+  border-radius:22px;
+  border:1px solid var(--govo-line);
+  background:linear-gradient(135deg,var(--govo-green),var(--govo-green2));
+  color:#031006;
+  font-weight:1000;
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 12px 28px rgba(140,255,0,.18);
+}
+.govo-phase5-btn.ghost{
+  background:rgba(8,35,19,.64);
+  color:var(--govo-white);
+}
+.govo-phase5-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:18px;
+}
+.govo-phase5-card{
+  border:1px solid var(--govo-line);
+  border-radius:24px;
+  padding:17px;
+  background:rgba(8,25,16,.74);
+  color:var(--govo-white);
+}
+.govo-phase5-card h3{
+  margin:0 0 8px;
+  color:var(--govo-green);
+  font-size:22px;
+}
+.govo-phase5-card p{
+  margin:0;
+  color:var(--govo-muted);
+  line-height:1.5;
+}
+.govo-phase5-price{
+  margin-top:12px;
+  color:#fff7b8;
+  font-weight:900;
+}
+.govo-phase5-form{
+  display:grid;
+  gap:12px;
+  margin-top:18px;
+}
+.govo-phase5-form input,
+.govo-phase5-form select,
+.govo-phase5-form textarea{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid var(--govo-line);
+  border-radius:16px;
+  padding:14px;
+  background:rgba(0,0,0,.28);
+  color:var(--govo-white);
+  font-size:16px;
+}
+.govo-phase5-form button{
+  border:0;
+  border-radius:18px;
+  padding:16px;
+  background:linear-gradient(135deg,var(--govo-green),var(--govo-green2));
+  color:#031006;
+  font-weight:1000;
+  font-size:17px;
+}
+.govo-phase5-note{
+  margin-top:14px;
+  padding:14px;
+  border-radius:18px;
+  border:1px dashed var(--govo-line);
+  color:#fff7b8;
+  background:rgba(255,247,184,.06);
+}
+@media(max-width:700px){
+  .govo-phase5-wrap{padding:0 22px}
+  .govo-phase5-actions{grid-template-columns:1fr}
+  .govo-phase5-grid{grid-template-columns:1fr}
+}

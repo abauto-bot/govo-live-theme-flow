@@ -197,3 +197,18 @@
     loadConfig();
   }
 })();
+
+/* GOVO Phase 5 rescue loader */
+(function(){
+  function add(tag, attrs){
+    var el=document.createElement(tag);
+    Object.keys(attrs).forEach(function(k){el.setAttribute(k,attrs[k]);});
+    document.head.appendChild(el);
+  }
+  if(!document.querySelector('link[href="/assets/govo-phase5-inventory-rescue.css"]')){
+    add('link',{rel:'stylesheet',href:'/assets/govo-phase5-inventory-rescue.css?v=phase5'});
+  }
+  if(!document.querySelector('script[src="/assets/govo-phase5-inventory-rescue.js"]')){
+    add('script',{src:'/assets/govo-phase5-inventory-rescue.js?v=phase5',defer:'defer'});
+  }
+})();

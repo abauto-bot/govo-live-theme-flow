@@ -224,3 +224,13 @@
   }
   addScript('/assets/govo-phase6a-inventory-renderer.js');
 })();
+
+/* GOVO Phase 6B server API/admin panel loader */
+(function(){
+  var src='/assets/govo-phase6b-admin-api.js';
+  if(document.querySelector('script[src^="'+src+'"]')) return;
+  var s=document.createElement('script');
+  s.src=src+'?v=phase6b';
+  s.defer=true;
+  document.head.appendChild(s);
+})();

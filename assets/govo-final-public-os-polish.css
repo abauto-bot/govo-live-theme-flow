@@ -1,0 +1,196 @@
+/* GOVO Final Public OS Polish — final locked customer-ready layer */
+:root{
+  --govo-final-black:#000704;
+  --govo-final-deep:#021407;
+  --govo-final-panel:#041d0d;
+  --govo-final-green:#8CFF00;
+  --govo-final-green2:#15F58A;
+  --govo-final-white:#F8FFF9;
+  --govo-final-soft:#D6E8DD;
+  --govo-final-muted:#9FB4A7;
+  --govo-final-line:rgba(140,255,0,.30);
+}
+
+/* remove ugly dirty/yellow/gu color feeling */
+body,
+html{
+  background:
+    radial-gradient(circle at 50% -12%,rgba(140,255,0,.10),transparent 30%),
+    linear-gradient(180deg,#000000 0%,#021006 45%,#000000 100%)!important;
+}
+
+img,
+svg,
+.logo,
+.brand,
+[class*="logo"],
+[class*="brand"]{
+  filter:saturate(1.08) contrast(1.05)!important;
+}
+
+/* fix top brand area glare and color balance */
+[class*="top"],
+[class*="header"],
+header{
+  background-color:rgba(0,10,4,.72)!important;
+}
+
+[class*="GOVO"],
+[class*="govo"],
+h1,h2,h3{
+  text-rendering:geometricPrecision;
+}
+
+/* clean neon green, not yellow */
+button,
+a,
+[class*="btn"],
+[class*="button"]{
+  -webkit-tap-highlight-color:transparent;
+}
+
+a[href*="order"],
+button,
+[class*="btn"],
+[class*="cta"],
+[class*="Button"]{
+  text-shadow:none!important;
+}
+
+/* main CTA readable */
+a,
+button{
+  font-weight:800;
+}
+
+.govo-final-os-strip{
+  position:relative;
+  z-index:20;
+  margin:18px 22px 16px;
+  padding:16px 18px;
+  border-radius:24px;
+  border:1px solid var(--govo-final-line);
+  background:
+    radial-gradient(circle at 12% 0%,rgba(140,255,0,.16),transparent 34%),
+    linear-gradient(145deg,rgba(4,29,13,.88),rgba(0,0,0,.62));
+  box-shadow:0 14px 38px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+  color:var(--govo-final-white);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+.govo-final-os-strip b{
+  display:block;
+  color:var(--govo-final-green);
+  font-size:clamp(18px,4.6vw,28px);
+  line-height:1.15;
+  margin-bottom:6px;
+}
+
+.govo-final-os-strip span{
+  display:block;
+  color:var(--govo-final-soft);
+  font-size:clamp(14px,3.8vw,19px);
+  line-height:1.45;
+}
+
+.govo-final-os-actions{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:13px;
+}
+
+.govo-final-os-actions a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:52px;
+  padding:10px;
+  border-radius:17px;
+  text-decoration:none;
+  border:1px solid rgba(140,255,0,.30);
+  color:#041006!important;
+  background:linear-gradient(135deg,#8cff00 0%,#4dff36 50%,#15f58a 100%)!important;
+  font-weight:1000;
+  box-shadow:0 12px 28px rgba(140,255,0,.17);
+}
+
+.govo-final-os-actions a.dark{
+  color:var(--govo-final-white)!important;
+  background:rgba(0,0,0,.34)!important;
+}
+
+/* public trust card */
+.govo-final-trust-row{
+  position:relative;
+  z-index:20;
+  margin:14px 22px 18px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+.govo-final-trust-row div{
+  border:1px solid rgba(140,255,0,.20);
+  border-radius:18px;
+  background:rgba(0,0,0,.24);
+  color:var(--govo-final-soft);
+  padding:11px 8px;
+  text-align:center;
+  font-weight:900;
+  font-size:clamp(11px,3vw,15px);
+  line-height:1.25;
+}
+
+.govo-final-trust-row b{
+  display:block;
+  color:var(--govo-final-green);
+  font-size:clamp(17px,4vw,22px);
+  margin-bottom:4px;
+}
+
+/* bottom nav spacing */
+body{
+  padding-bottom:116px!important;
+}
+
+main,
+#root,
+.app,
+.page,
+.govo-app,
+.govo-shell{
+  padding-bottom:116px!important;
+}
+
+/* cards: keep old UI but sharpen */
+[class*="card"],
+[class*="Card"]{
+  border-color:rgba(140,255,0,.24)!important;
+}
+
+/* no yellow notes */
+[class*="note"],
+[class*="Note"],
+[class*="meta"],
+[class*="Meta"]{
+  color:var(--govo-final-soft)!important;
+}
+
+/* mobile public readability */
+@media(max-width:700px){
+  .govo-final-os-strip{
+    margin:16px 22px 14px;
+    padding:15px 16px;
+    border-radius:22px;
+  }
+  .govo-final-os-actions{
+    grid-template-columns:1fr;
+  }
+  .govo-final-trust-row{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    margin:12px 22px 16px;
+  }
+}

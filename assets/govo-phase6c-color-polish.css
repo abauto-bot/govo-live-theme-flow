@@ -1,0 +1,136 @@
+/* GOVO Phase 6C — premium contrast polish */
+:root{
+  --govo-bg:#020503!important;
+  --govo-bg2:#06180f!important;
+  --govo-green:#8cff00!important;
+  --govo-green2:#12f28a!important;
+  --govo-white:#ffffff!important;
+  --govo-soft:#dcefe4!important;
+  --govo-muted:#b9c9c0!important;
+  --govo-panel:rgba(3,18,10,.92)!important;
+  --govo-line:rgba(140,255,0,.34)!important;
+}
+
+/* remove yellow/pee tone */
+.govo-phase5-price,
+.govo-phase5-note,
+.govo-admin-inventory-note,
+.govo-inventory-meta,
+.govo-admin-api-output,
+.govo-page-footer,
+[class*="note"],
+[class*="meta"]{
+  color:#ffffff!important;
+}
+
+/* primary CTA: clean black text on neon */
+.govo-phase5-btn,
+.govo-inventory-cta,
+.govo-admin-api-form button,
+.govo-admin-api-btn,
+button,
+a.govo-phase5-btn{
+  color:#031006!important;
+  text-shadow:none!important;
+  opacity:1!important;
+  filter:none!important;
+  background:linear-gradient(135deg,#8cff00 0%,#39ff45 45%,#12f28a 100%)!important;
+  box-shadow:
+    0 14px 32px rgba(140,255,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.30)!important;
+}
+
+/* secondary CTA: dark glass + white text */
+.govo-phase5-btn.ghost,
+a.govo-phase5-btn.ghost{
+  color:#ffffff!important;
+  background:linear-gradient(145deg,rgba(3,18,10,.96),rgba(7,38,19,.90))!important;
+  border:1px solid rgba(140,255,0,.38)!important;
+  box-shadow:inset 0 0 0 1px rgba(140,255,0,.08), 0 12px 28px rgba(0,0,0,.28)!important;
+}
+
+/* card typography */
+.govo-phase5-title,
+.govo-inventory-card h3,
+.govo-admin-api-panel h2{
+  color:#ffffff!important;
+  text-shadow:0 0 18px rgba(140,255,0,.10)!important;
+}
+
+.govo-phase5-title b,
+.govo-phase5-badge,
+.govo-inventory-card h3{
+  color:#8cff00!important;
+}
+
+.govo-phase5-sub,
+.govo-inventory-card p,
+.govo-phase5-card p{
+  color:#dcefe4!important;
+}
+
+/* top brand glare reduce */
+.govo-brand,
+.govo-brand-title,
+[class*="brand"]{
+  filter:saturate(1.02) contrast(1.03)!important;
+}
+
+.govo-phase5-badge{
+  background:rgba(140,255,0,.10)!important;
+  border-color:rgba(140,255,0,.42)!important;
+}
+
+/* input/admin fields */
+.govo-phase5-form input,
+.govo-phase5-form select,
+.govo-phase5-form textarea,
+.govo-admin-api-form input,
+.govo-admin-api-form select,
+.govo-admin-api-form textarea{
+  color:#ffffff!important;
+  background:rgba(0,0,0,.38)!important;
+  border-color:rgba(140,255,0,.32)!important;
+}
+
+.govo-phase5-form input::placeholder,
+.govo-phase5-form textarea::placeholder,
+.govo-admin-api-form input::placeholder,
+.govo-admin-api-form textarea::placeholder{
+  color:#9fb2a8!important;
+}
+
+/* bottom nav: clean active green, inactive soft white */
+nav a,
+.govo-bottom-nav a,
+[class*="bottom"] a{
+  color:#dcefe4!important;
+}
+nav a.active,
+.govo-bottom-nav a.active,
+[class*="bottom"] a.active{
+  color:#8cff00!important;
+}
+
+/* mobile spacing polish */
+@media(max-width:700px){
+  .govo-phase5-wrap{
+    margin-top:14px!important;
+    margin-bottom:118px!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  .govo-phase5-hero{
+    padding:20px!important;
+    border-radius:26px!important;
+  }
+  .govo-phase5-title{
+    font-size:clamp(38px,10vw,58px)!important;
+    letter-spacing:-1.5px!important;
+  }
+  .govo-phase5-btn{
+    min-height:74px!important;
+    font-size:20px!important;
+    font-weight:1000!important;
+  }
+}

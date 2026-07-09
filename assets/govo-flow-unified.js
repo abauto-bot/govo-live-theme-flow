@@ -234,3 +234,13 @@
   s.defer=true;
   document.head.appendChild(s);
 })();
+
+/* GOVO Phase 6C color polish loader */
+(function(){
+  var href='/assets/govo-phase6c-color-polish.css';
+  if(document.querySelector('link[href^="'+href+'"]')) return;
+  var l=document.createElement('link');
+  l.rel='stylesheet';
+  l.href=href+'?v=phase6c';
+  document.head.appendChild(l);
+})();

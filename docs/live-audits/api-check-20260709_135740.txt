@@ -1,0 +1,21 @@
+### inventory health
+{
+  "ok": true,
+  "service": "govo-inventory-api",
+  "time": "2026-07-09T13:57:40.724Z"
+}
+### inventory
+{
+  "version": "phase6b-inventory-api",
+  "brand": "GOVO Express",
+  "tagline": "WHEREVER YOU ARE, WE'RE THERE.",
+  "areas": [
+    "Meherpur",
+    "Gangni",
+    "Bamundi",
+    "Mujibnagar",
+    "Amjhupi"
+  ],
+  "shops": [],
+  "services": []
+}

@@ -198,11 +198,11 @@
   }
 })();
 
-/* GOVO FINAL PUBLIC OS POLISH */
+/* GOVO FINAL FOCUS CONTRAST FIX */
 (function(){
-  var css='/assets/govo-final-public-os-polish.css';
-  var js='/assets/govo-final-public-os-polish.js';
-  var v='finalpublicos';
+  var css='/assets/govo-final-focus-contrast.css';
+  var js='/assets/govo-final-focus-contrast.js';
+  var v='focuscontrast';
   if(!document.querySelector('link[href^="'+css+'"]')){
     var l=document.createElement('link');
     l.rel='stylesheet';

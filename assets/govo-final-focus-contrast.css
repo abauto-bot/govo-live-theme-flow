@@ -1,0 +1,215 @@
+/* GOVO Final Focus Contrast Fix
+   Direction: deep black, white, controlled green.
+   No cyan/cheap lime flood, no huge public strip buttons.
+*/
+
+:root{
+  --govo-black:#000403;
+  --govo-deep:#020b05;
+  --govo-deep2:#04150a;
+  --govo-panel:rgba(2,14,7,.86);
+  --govo-panel2:rgba(4,20,10,.74);
+  --govo-green:#7CFF1A;
+  --govo-green-soft:#3BE77F;
+  --govo-white:#F8FFF9;
+  --govo-soft:#D8E7DD;
+  --govo-muted:#9FAFA6;
+  --govo-line:rgba(124,255,26,.24);
+}
+
+/* remove the bad inserted strip/trust row completely */
+.govo-final-os-strip,
+.govo-final-trust-row{
+  display:none!important;
+}
+
+/* page background: real deep black/green, not bright green wash */
+html,body{
+  background:
+    radial-gradient(circle at 50% -16%,rgba(124,255,26,.07),transparent 30%),
+    radial-gradient(circle at 12% 14%,rgba(59,231,127,.045),transparent 30%),
+    linear-gradient(180deg,#000000 0%,#010905 48%,#000000 100%)!important;
+  color:var(--govo-white)!important;
+}
+
+/* reduce cheap over-saturation */
+img,svg,[class*="logo"],[class*="brand"]{
+  filter:saturate(.92) contrast(1.06)!important;
+}
+
+/* header/top brand: less glowing candy, more premium */
+header,
+[class*="header"],
+[class*="top"]{
+  background:rgba(0,7,4,.82)!important;
+  border-color:rgba(124,255,26,.18)!important;
+}
+
+/* logo box: stop full neon blob feeling */
+.govo-old-logo,
+.g8-logo,
+.govo-phase7-logo,
+[class*="logo-box"],
+[class*="brand-logo"]{
+  background:
+    radial-gradient(circle at 35% 25%,rgba(124,255,26,.18),transparent 42%),
+    linear-gradient(145deg,rgba(4,25,12,.96),rgba(0,0,0,.82))!important;
+  border:1px solid rgba(124,255,26,.30)!important;
+  box-shadow:0 0 18px rgba(124,255,26,.15), inset 0 0 12px rgba(255,255,255,.04)!important;
+}
+
+/* main cards: black/white focused */
+[class*="hero"],
+[class*="panel"],
+[class*="card"],
+[class*="Card"]{
+  background:
+    radial-gradient(circle at 82% 0%,rgba(124,255,26,.06),transparent 34%),
+    linear-gradient(145deg,rgba(2,14,7,.88),rgba(0,0,0,.78))!important;
+  border-color:rgba(124,255,26,.22)!important;
+  box-shadow:0 18px 54px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+
+/* typography: clean white focus */
+h1,h2,h3,
+[class*="title"],
+[class*="Title"]{
+  color:var(--govo-white)!important;
+  text-shadow:none!important;
+}
+
+p,span,small,
+[class*="sub"],
+[class*="Sub"],
+[class*="desc"],
+[class*="Desc"]{
+  color:var(--govo-soft)!important;
+}
+
+/* green text only as accent, not flood */
+[class*="kicker"],
+[class*="badge"],
+[class*="chip"],
+[class*="tag"]{
+  color:var(--govo-green)!important;
+  background:rgba(124,255,26,.055)!important;
+  border-color:rgba(124,255,26,.20)!important;
+  box-shadow:none!important;
+}
+
+/* kill bright huge gradient buttons */
+.govo-old-btn,
+.g8-btn,
+.govo-phase5-btn,
+.govo-phase7-btn,
+.govo-biz-btn,
+[class*="btn"],
+[class*="Btn"],
+[class*="button"],
+[class*="Button"],
+button{
+  background:
+    linear-gradient(145deg,rgba(4,18,9,.96),rgba(0,0,0,.86))!important;
+  color:var(--govo-white)!important;
+  border:1px solid rgba(124,255,26,.28)!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.035)!important;
+  text-shadow:none!important;
+}
+
+/* only important order CTA gets controlled green outline text, not filled cyan */
+a[href*="order"],
+button[type="submit"]{
+  color:var(--govo-green)!important;
+  background:
+    linear-gradient(145deg,rgba(5,22,11,.98),rgba(0,0,0,.88))!important;
+  border:1px solid rgba(124,255,26,.38)!important;
+}
+
+/* bottom nav: keep premium, no candy */
+[class*="bottom"],
+nav{
+  background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.94) 38%,#000)!important;
+  border-color:rgba(124,255,26,.18)!important;
+}
+
+[class*="nav"],
+nav a{
+  color:var(--govo-soft)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+[class*="nav"].active,
+nav a.active{
+  color:var(--govo-green)!important;
+  background:rgba(124,255,26,.075)!important;
+  border-color:rgba(124,255,26,.22)!important;
+}
+
+/* forms and business flow */
+input,select,textarea{
+  background:rgba(0,0,0,.42)!important;
+  color:var(--govo-white)!important;
+  border:1px solid rgba(124,255,26,.24)!important;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:rgba(216,231,221,.62)!important;
+}
+
+/* remove yellow/dirty note/meta tones */
+[class*="note"],
+[class*="Note"],
+[class*="meta"],
+[class*="Meta"],
+[class*="price"],
+[class*="Price"]{
+  color:var(--govo-soft)!important;
+}
+
+/* control huge button height only in content, bottom nav unaffected */
+main a[class*="btn"],
+main a[class*="Btn"],
+main button,
+#root a[class*="btn"],
+#root button,
+.app a[class*="btn"],
+.app button{
+  min-height:54px!important;
+  border-radius:18px!important;
+  font-size:clamp(15px,4vw,18px)!important;
+  padding:12px 16px!important;
+}
+
+/* but forms submit should still be tappable */
+form button,
+.govo-biz-form button{
+  min-height:52px!important;
+}
+
+/* mobile spacing */
+body{
+  padding-bottom:112px!important;
+}
+
+main,#root,.app,.page,.govo-app,.govo-shell{
+  padding-bottom:112px!important;
+}
+
+@media(max-width:700px){
+  main a[class*="btn"],
+  main button,
+  #root a[class*="btn"],
+  #root button,
+  .app a[class*="btn"],
+  .app button{
+    min-height:52px!important;
+  }
+
+  [class*="hero"],
+  [class*="panel"],
+  [class*="card"]{
+    border-radius:22px!important;
+  }
+}

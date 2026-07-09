@@ -212,3 +212,15 @@
     add('script',{src:'/assets/govo-phase5-inventory-rescue.js?v=phase5',defer:'defer'});
   }
 })();
+
+/* GOVO Phase 6A inventory source renderer loader */
+(function(){
+  function addScript(src){
+    if(document.querySelector('script[src^="'+src+'"]')) return;
+    var s=document.createElement('script');
+    s.src=src+'?v=phase6a';
+    s.defer=true;
+    document.head.appendChild(s);
+  }
+  addScript('/assets/govo-phase6a-inventory-renderer.js');
+})();

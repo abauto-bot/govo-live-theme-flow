@@ -1,0 +1,6 @@
+2026/07/09 05:26:05 [warn] 384084#384084: duplicate MIME type "text/html" in /etc/nginx/conf.d/000-app-govoexpress-14a-onboarding.conf:98
+2026/07/09 05:26:05 [warn] 384084#384084: duplicate MIME type "text/html" in /etc/nginx/conf.d/000-app-govoexpress-14a-onboarding.conf:111
+2026/07/09 05:26:05 [warn] 384084#384084: duplicate MIME type "text/html" in /etc/nginx/snippets/govo-admin-nginx-theme.conf:22
+2026/07/09 05:26:05 [warn] 384084#384084: duplicate MIME type "text/html" in /etc/nginx/snippets/govo-admin-nginx-theme.conf:35
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful

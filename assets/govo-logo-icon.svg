@@ -1,19 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="GOVO">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="GOVO GO">
   <defs>
-    <linearGradient id="govoGreen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8CFF00"/>
-      <stop offset="52%" stop-color="#67D51D"/>
-      <stop offset="100%" stop-color="#2E8E19"/>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9AFF18"/>
+      <stop offset="45%" stop-color="#58D018"/>
+      <stop offset="100%" stop-color="#087A2A"/>
     </linearGradient>
+    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCE7DF"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="900" height="520" fill="#020403"/>
-  <g transform="translate(135 68)">
-    <path d="M247 24 C165 12 84 64 58 145 C25 246 91 350 198 365 C281 377 356 332 389 263 L242 263 L268 195 L470 195 C478 295 414 392 310 426 C181 468 41 392 7 263 C-26 137 50 12 178 -18 C240 -32 305 -18 354 17 L318 77 C298 50 276 31 247 24Z" fill="url(#govoGreen)"/>
-    <path d="M209 205 L402 205 L402 262 L181 262 Z" fill="url(#govoGreen)"/>
-    <circle cx="522" cy="225" r="117" fill="none" stroke="#FFFFFF" stroke-width="62"/>
-    <path d="M428 133 C450 103 477 86 509 78" fill="none" stroke="#020403" stroke-width="34" stroke-linecap="round"/>
-    <path d="M475 180 L525 288 L580 180 L536 180 L523 223 L508 180 Z" fill="url(#govoGreen)"/>
-    <path d="M620 78 C678 106 710 162 710 225" fill="none" stroke="url(#govoGreen)" stroke-width="22" stroke-linecap="round"/>
-    <path d="M662 36 C744 77 790 151 790 225" fill="none" stroke="url(#govoGreen)" stroke-width="22" stroke-linecap="round"/>
+
+  <rect width="720" height="420" fill="transparent"/>
+
+  <g transform="translate(34 54)" filter="url(#glow)">
+    <text x="0" y="240" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="275" font-weight="900" fill="url(#gg)" letter-spacing="-16">G</text>
+    <path d="M46 260 C124 290 226 278 302 226" fill="none" stroke="#9AFF18" stroke-width="14" stroke-linecap="round" opacity=".86"/>
+
+    <g transform="translate(330 8)">
+      <circle cx="158" cy="142" r="124" fill="#020503" stroke="url(#gw)" stroke-width="28"/>
+      <path d="M54 79 C90 29 151 10 211 22" fill="none" stroke="url(#gg)" stroke-width="29" stroke-linecap="round"/>
+      <path d="M245 62 C294 108 304 177 270 228" fill="none" stroke="url(#gg)" stroke-width="29" stroke-linecap="round"/>
+      <path d="M75 229 C112 267 182 278 235 248" fill="none" stroke="url(#gg)" stroke-width="29" stroke-linecap="round"/>
+
+      <path d="M105 118 L151 210 L219 78" fill="none" stroke="#7CFF1A" stroke-width="33" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <path d="M64 133 h30 v39 h-30 z" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+      <path d="M69 133 c0-19 20-19 20 0" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+
+      <circle cx="158" cy="91" r="12" fill="#FFFFFF"/>
+      <circle cx="134" cy="102" r="9" fill="#FFFFFF" opacity=".9"/>
+      <circle cx="182" cy="102" r="9" fill="#FFFFFF" opacity=".9"/>
+      <path d="M119 142 c8-25 70-25 78 0" fill="#FFFFFF"/>
+
+      <path d="M133 204 L158 183 L184 204 V226 H133 Z" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M149 226 v-23 h18 v23" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+
+      <path d="M236 148 l31 31" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="231" cy="143" r="11" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+      <circle cx="272" cy="184" r="9" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+
+      <path d="M294 45 C335 70 358 108 359 153" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round"/>
+      <path d="M330 18 C392 57 428 111 428 176" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round"/>
+    </g>
   </g>
 </svg>

@@ -1,84 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="GOVO Express">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" role="img" aria-label="GOVO Express">
   <defs>
-    <linearGradient id="govoGreen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8CFF00"/>
-      <stop offset="52%" stop-color="#67D51D"/>
-      <stop offset="100%" stop-color="#2E8E19"/>
+    <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9AFF18"/>
+      <stop offset="45%" stop-color="#58D018"/>
+      <stop offset="100%" stop-color="#087A2A"/>
     </linearGradient>
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="3.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCE7DF"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <rect width="900" height="520" fill="#020403"/>
+  <rect width="1100" height="640" fill="#000000"/>
 
-  <!-- GO mark -->
-  <g transform="translate(135 68)" filter="url(#softGlow)">
-    <!-- G -->
-    <path d="M247 24
-             C165 12 84 64 58 145
-             C25 246 91 350 198 365
-             C281 377 356 332 389 263
-             L242 263
-             L268 195
-             L470 195
-             C478 295 414 392 310 426
-             C181 468 41 392 7 263
-             C-26 137 50 12 178 -18
-             C240 -32 305 -18 354 17
-             L318 77
-             C298 50 276 31 247 24Z"
-          fill="url(#govoGreen)"/>
+  <!-- GO master mark -->
+  <g transform="translate(120 112)" filter="url(#glow)">
+    <!-- G = GOVO action / speed -->
+    <text x="0" y="235"
+      font-family="Arial Black, Arial, Helvetica, sans-serif"
+      font-size="265"
+      font-weight="900"
+      fill="url(#gg)"
+      letter-spacing="-16">G</text>
 
-    <!-- G inner bar -->
-    <path d="M209 205 L402 205 L402 262 L181 262 Z" fill="url(#govoGreen)"/>
+    <!-- subtle forward cut under G -->
+    <path d="M47 255 C120 286 222 277 295 228"
+      fill="none" stroke="#9AFF18" stroke-width="14" stroke-linecap="round" opacity=".86"/>
 
-    <!-- O white ring -->
-    <circle cx="522" cy="225" r="117" fill="none" stroke="#FFFFFF" stroke-width="62"/>
-    <path d="M428 133 C450 103 477 86 509 78" fill="none" stroke="#020403" stroke-width="34" stroke-linecap="round"/>
+    <!-- O service hub outer ring -->
+    <g transform="translate(332 12)">
+      <circle cx="180" cy="140" r="126" fill="#020503" stroke="url(#gw)" stroke-width="28"/>
+      <path d="M72 75 C103 32 157 10 214 20" fill="none" stroke="url(#gg)" stroke-width="29" stroke-linecap="round"/>
+      <path d="M264 68 C303 111 306 174 276 220" fill="none" stroke="url(#gg)" stroke-width="29" stroke-linecap="round"/>
+      <path d="M92 226 C128 264 190 278 240 252" fill="none" stroke="url(#gg)" stroke-width="29" stroke-linecap="round"/>
 
-    <!-- V inside O -->
-    <path d="M475 180 L525 288 L580 180 L536 180 L523 223 L508 180 Z" fill="url(#govoGreen)"/>
+      <!-- V/check inside O = verified order flow -->
+      <path d="M123 113 L173 213 L238 83"
+        fill="none" stroke="#7CFF1A" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- connection waves -->
-    <path d="M620 78 C678 106 710 162 710 225" fill="none" stroke="url(#govoGreen)" stroke-width="22" stroke-linecap="round"/>
-    <path d="M662 36 C744 77 790 151 790 225" fill="none" stroke="url(#govoGreen)" stroke-width="22" stroke-linecap="round"/>
+      <!-- service concepts inside O -->
+      <!-- shop bag -->
+      <path d="M78 128 h32 v42 h-32 z" fill="none" stroke="#FFFFFF" stroke-width="8" rx="4"/>
+      <path d="M83 128 c0-22 22-22 22 0" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- people/community -->
+      <circle cx="184" cy="92" r="13" fill="#FFFFFF"/>
+      <circle cx="158" cy="103" r="10" fill="#FFFFFF" opacity=".9"/>
+      <circle cx="210" cy="103" r="10" fill="#FFFFFF" opacity=".9"/>
+      <path d="M142 143 c8-28 73-28 82 0" fill="#FFFFFF"/>
+
+      <!-- home/local -->
+      <path d="M155 202 L181 180 L207 202 V226 H155 Z" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M171 226 v-24 h20 v24" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+
+      <!-- wrench/service -->
+      <path d="M254 145 l32 32" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="248" cy="139" r="13" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+      <circle cx="291" cy="182" r="10" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+
+      <!-- signal/connection -->
+      <path d="M312 44 C358 72 382 111 383 159" fill="none" stroke="url(#gg)" stroke-width="17" stroke-linecap="round"/>
+      <path d="M348 16 C418 59 455 112 455 180" fill="none" stroke="url(#gg)" stroke-width="17" stroke-linecap="round"/>
+    </g>
   </g>
 
   <!-- wordmark -->
-  <g transform="translate(135 392)">
-    <text x="0" y="0"
-          font-family="Arial, Helvetica, sans-serif"
-          font-size="52"
-          font-weight="700"
-          letter-spacing="21"
-          fill="#7CFF1A">GOVO</text>
-
-    <text x="333" y="0"
-          font-family="Arial, Helvetica, sans-serif"
-          font-size="52"
-          font-weight="700"
-          letter-spacing="21"
-          fill="#FFFFFF">EXPRESS</text>
-
-    <line x1="0" y1="55" x2="690" y2="55" stroke="#7CFF1A" stroke-width="3"/>
-
-    <text x="0" y="108"
-          font-family="Arial, Helvetica, sans-serif"
-          font-size="30"
-          font-weight="700"
-          letter-spacing="7"
-          fill="#FFFFFF">SMART SERVICE.</text>
-
-    <text x="330" y="108"
-          font-family="Arial, Helvetica, sans-serif"
-          font-size="30"
-          font-weight="700"
-          letter-spacing="7"
-          fill="#7CFF1A">STRONGER COMMUNITY.</text>
+  <g transform="translate(165 442)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="22" fill="#7CFF1A">GOVO</text>
+    <text x="355" y="0" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="22" fill="#FFFFFF">EXPRESS</text>
+    <line x1="0" y1="58" x2="765" y2="58" stroke="#7CFF1A" stroke-width="3" opacity=".9"/>
+    <text x="0" y="118" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="7" fill="#FFFFFF">SMART SERVICE.</text>
+    <text x="340" y="118" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="7" fill="#7CFF1A">STRONGER COMMUNITY.</text>
   </g>
 </svg>

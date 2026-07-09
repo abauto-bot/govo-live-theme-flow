@@ -217,11 +217,11 @@
   }
 })();
 
-/* GOVO NEW GO LOGO OVERRIDE */
+/* GOVO FINAL GO CONCEPT LOGO OVERRIDE */
 (function(){
   var css='/assets/govo-logo-override.css';
   var js='/assets/govo-logo-override.js';
-  var v='newgo';
+  var v='goConceptFinal';
   if(!document.querySelector('link[href^="'+css+'"]')){
     var l=document.createElement('link');
     l.rel='stylesheet';

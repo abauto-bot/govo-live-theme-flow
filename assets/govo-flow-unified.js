@@ -235,3 +235,21 @@
   document.head.appendChild(s);
 })();
 
+
+/* GOVO Phase 7 unified all pages UI loader */
+(function(){
+  var css='/assets/govo-phase7-unified-all-pages.css';
+  var js='/assets/govo-phase7-unified-all-pages.js';
+  if(!document.querySelector('link[href^="'+css+'"]')){
+    var l=document.createElement('link');
+    l.rel='stylesheet';
+    l.href=css+'?v=phase7';
+    document.head.appendChild(l);
+  }
+  if(!document.querySelector('script[src^="'+js+'"]')){
+    var s=document.createElement('script');
+    s.src=js+'?v=phase7';
+    s.defer=true;
+    document.head.appendChild(s);
+  }
+})();

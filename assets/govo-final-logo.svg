@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520">
+  <defs>
+    <linearGradient id="govoGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c7ff24"/>
+      <stop offset="45%" stop-color="#8cff00"/>
+      <stop offset="100%" stop-color="#29b900"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path d="M260 40 C156 40 84 116 84 217 C84 332 207 396 260 478 C313 396 436 332 436 217 C436 116 364 40 260 40Z"
+        fill="none" stroke="url(#govoGreen)" stroke-width="42" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <path d="M300 218 H424" stroke="url(#govoGreen)" stroke-width="48"/>
+
+  <path d="M286 152 C252 124 192 132 165 174 C131 227 157 300 218 316 C254 325 291 313 313 286"
+        fill="none" stroke="#ffffff" stroke-width="34" stroke-linecap="round" filter="url(#glow)"/>
+
+  <path d="M272 404 L302 404 L276 444 L307 444 L254 500 L270 452 L238 452Z"
+        fill="url(#govoGreen)" filter="url(#glow)"/>
+
+  <ellipse cx="260" cy="455" rx="118" ry="32"
+           fill="none" stroke="#ffffff" stroke-width="18" opacity="0.95" filter="url(#glow)"/>
+</svg>
